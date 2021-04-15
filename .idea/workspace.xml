@@ -9,11 +9,32 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68df5d74-6aad-48bf-a385-efd8b77314ed" name="Default Changelist" comment="" />
+    <list default="true" id="24c38c90-2a03-4f1f-9e29-4fbbfe40ae36" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/decorator/TicketTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/decorator/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/decorator/Ticket.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +47,18 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+        <option value="JUnit3 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,11 +80,54 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="decorator" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="TicketTest.createTicket" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;decorator.TicketTest.createTicket&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.TicketTest.createTicket" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="68df5d74-6aad-48bf-a385-efd8b77314ed" name="Default Changelist" comment="" />
+      <changelist id="24c38c90-2a03-4f1f-9e29-4fbbfe40ae36" name="Default Changelist" comment="" />
       <created>1618402296589</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -92,9 +168,41 @@
     <option name="LAST_COMMIT_MESSAGE" value="Modules added" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1618472451859">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="121" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1618472451859" />
+    <state width="1481" height="195" key="GridCell.Tab.0.bottom" timestamp="1618474194141">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1481" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1618474194141" />
+    <state width="1481" height="195" key="GridCell.Tab.0.center" timestamp="1618474194141">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1481" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1618474194141" />
+    <state width="1481" height="195" key="GridCell.Tab.0.left" timestamp="1618474194141">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1481" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1618474194141" />
+    <state width="1481" height="195" key="GridCell.Tab.0.right" timestamp="1618474194141">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1481" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1618474194141" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1618474426045">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1618474426045" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1618404313317">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1618404313317" />
+    <state x="485" y="138" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1618472469954">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="485" y="138" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1618472469954" />
+    <state x="277" y="0" key="new project wizard" timestamp="1618473299321">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="0" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1618473299321" />
   </component>
 </project>
