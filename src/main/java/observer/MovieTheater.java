@@ -7,10 +7,11 @@ public interface MovieTheater {
     Set<Observer> observers = new HashSet<>();
 
     void addObserver(Observer observer);
-    String warnObservers();
+    String warnObservers(String message);
 
-    int getTicketCount();
-    String ticketSold();
+    int getTicketsSold();
+    void ticketSold();
 
-    String seatFilled();
+    int getSeatsFilled();
+    void seatFilled();
 }

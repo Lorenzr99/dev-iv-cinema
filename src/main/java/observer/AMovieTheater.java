@@ -1,5 +1,9 @@
 package observer;
 
+import decorator.Marathon;
+import decorator.StandardTicket;
+import decorator.Ticket;
+
 public class AMovieTheater implements MovieTheater {
     private String updateString;
     private int ticketsSold;
@@ -12,8 +16,12 @@ public class AMovieTheater implements MovieTheater {
         maxSeats = 5;
     }
 
-    public int getTicketCount() {
+    public int getTicketsSold() {
         return ticketsSold;
+    }
+
+    public int getSeatsFilled() {
+        return seatsFilled;
     }
 
     @Override
@@ -22,36 +30,33 @@ public class AMovieTheater implements MovieTheater {
     }
 
     @Override
-    public String warnObservers() {
+    public String warnObservers(String message) {
         for (Observer observer: observers) {
-            updateString = observer.update();
+            updateString = observer.update(message);
         }
         return updateString;
     }
 
     //methods will call observers
     @Override
-    public String ticketSold() {
+    public void ticketSold() {
         if(ticketsSold < maxSeats) {
             ticketsSold++;
-            if(ticketsSold == 1) System.out.println("1 ticket is currently sold!");
-            else System.out.println(ticketsSold + " tickets are currently sold!");
-            return warnObservers();
+            warnObservers("Ticket sold");
         } else {
-            System.out.println("Movie theater is SOLD OUT!");
-            return warnObservers();
+            warnObservers("Sold out");
+            System.out.println("** Movie theater is SOLD OUT!");
         }
     }
 
     @Override
-    public String seatFilled() {
-        if(seatsFilled <= ticketsSold && ticketsSold != 0) {
-            seatsFilled++;
-            if(seatsFilled == 1) System.out.println("1 seat is currently filled!");
-            else System.out.println(seatsFilled + " seats are currently filled!");
-            return warnObservers();
-        } else {
-            return "A ticket must be bought first!";
-        }
+    public void seatFilled() {
+            if (seatsFilled <= ticketsSold && ticketsSold != 0) {
+                seatsFilled++;
+                warnObservers("Seat filled");
+            } else {
+                warnObservers("No ticket");
+                System.out.println("** A ticket must be bought first!");
+            }
     }
 }

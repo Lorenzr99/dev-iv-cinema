@@ -8,8 +8,8 @@ public class AnObserver implements Observer {
     }
 
     @Override
-    public String update() {
-        System.out.println("Observer " + observerCount + " was updated!");
+    public String update(String message) {
+        System.out.println("\n-- Observer " + observerCount + " was updated: " + message + " --");
         return "AnObserver was updated!";
     }
 }

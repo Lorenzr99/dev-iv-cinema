@@ -1,6 +1,8 @@
 package observer;
 
 
+import decorator.StandardTicket;
+import decorator.Ticket;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +18,7 @@ public class ObserverTest {
         Observer firstObserver = new AnObserver(1);
         MovieTheater movieTheater = new AMovieTheater();
         movieTheater.addObserver(firstObserver);
-        assertEquals(movieTheater.warnObservers(), "AnObserver was updated!");
+        assertEquals("AnObserver was updated!", movieTheater.warnObservers("Test"));
     }
 
     @Test
@@ -24,7 +26,8 @@ public class ObserverTest {
         Observer secondObserver = new AnObserver(2);
         MovieTheater movieTheater = new AMovieTheater();
         movieTheater.addObserver(secondObserver);
-        assertEquals(movieTheater.ticketSold(), "AnObserver was updated!");
+        new StandardTicket(movieTheater);
+        assertEquals(1, movieTheater.getTicketsSold());
     }
 
     @Test
@@ -32,26 +35,42 @@ public class ObserverTest {
         Observer thirdObserver = new AnObserver(3);
         MovieTheater movieTheater = new AMovieTheater();
         movieTheater.addObserver(thirdObserver);
-        movieTheater.ticketSold();
-        movieTheater.ticketSold();
-        movieTheater.ticketSold();
-        assertEquals(movieTheater.getTicketCount(), 3);
+        new StandardTicket(movieTheater);
+        new StandardTicket(movieTheater);
+        new StandardTicket(movieTheater);
+        assertEquals(3, movieTheater.getTicketsSold());
+    }
+
+    @Test
+    void ticketsSoldOut() {
+        Observer fourthObserver = new AnObserver(4);
+        MovieTheater movieTheater = new AMovieTheater();
+        movieTheater.addObserver(fourthObserver);
+        new StandardTicket(movieTheater); //1
+        new StandardTicket(movieTheater); //2
+        new StandardTicket(movieTheater); //3
+        new StandardTicket(movieTheater); //4
+        new StandardTicket(movieTheater); //5 ! Maximum tickets
+        new StandardTicket(movieTheater); //6 ! Tickets sold out
+        assertEquals(5, movieTheater.getTicketsSold());
     }
 
     @Test
     void seatFilled() {
-        Observer fourthObserver = new AnObserver(4);
+        Observer fifthObserver = new AnObserver(5);
         MovieTheater movieTheater = new AMovieTheater();
-        movieTheater.addObserver(fourthObserver);
-        movieTheater.ticketSold();
-        assertEquals(movieTheater.seatFilled(), "AnObserver was updated!");
+        movieTheater.addObserver(fifthObserver);
+        new StandardTicket(movieTheater);
+        new Seat(movieTheater);
+        assertEquals(1, movieTheater.getSeatsFilled());
     }
 
     @Test
     void seatFilledWithoutTicket() {
-        Observer fifthObserver = new AnObserver(5);
+        Observer sixthObserver = new AnObserver(6);
         MovieTheater movieTheater = new AMovieTheater();
-        movieTheater.addObserver(fifthObserver);
-        assertEquals(movieTheater.seatFilled(), "A ticket must be bought first!");
-        }
+        movieTheater.addObserver(sixthObserver);
+        new Seat(movieTheater);
+        assertEquals(0, movieTheater.getSeatsFilled());
+    }
 }
