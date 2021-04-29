@@ -1,93 +1,34 @@
 
-+-- Observer 4 was updated: Ticket sold --
++-- Observer 7 was updated: Ticket sold --
 1 ticket is currently sold!
 
-+-- Observer 4 was updated: Ticket sold --
++-- Observer 7 was updated: Ticket sold --
 2 tickets are currently sold!
 
-+-- Observer 4 was updated: Ticket sold --
++-- Observer 7 was updated: Ticket sold --
 3 tickets are currently sold!
 
-+-- Observer 4 was updated: Ticket sold --
++-- Observer 7 was updated: Ticket sold --
 4 tickets are currently sold!
 
-+-- Observer 4 was updated: Ticket sold --
++-- Observer 7 was updated: Ticket sold --
 5 tickets are currently sold!
 
-(-- Observer 4 was updated: Sold out --
-** Movie theater is SOLD OUT!
-5 tickets are currently sold!
-
-$-- Observer 4 was updated: Test --
-
-$-- Observer 1 was updated: Test --
-
-+-- Observer 4 was updated: Ticket sold --
-
-+-- Observer 5 was updated: Ticket sold --
-
-+-- Observer 1 was updated: Ticket sold --
-1 ticket is currently sold!
-
-+-- Observer 4 was updated: Seat filled --
-
-+-- Observer 5 was updated: Seat filled --
-
-+-- Observer 1 was updated: Seat filled --
-1 seat is currently filled!
-
-)-- Observer 4 was updated: No ticket --
-
-)-- Observer 6 was updated: No ticket --
-
-)-- Observer 5 was updated: No ticket --
-
-)-- Observer 1 was updated: No ticket --
-#** A ticket must be bought first!
-0 seats are currently filled!
-
-+-- Observer 4 was updated: Ticket sold --
-
-+-- Observer 6 was updated: Ticket sold --
-
-+-- Observer 5 was updated: Ticket sold --
-
-+-- Observer 1 was updated: Ticket sold --
-
-+-- Observer 3 was updated: Ticket sold --
-1 ticket is currently sold!
-
-+-- Observer 4 was updated: Ticket sold --
-
-+-- Observer 6 was updated: Ticket sold --
-
-+-- Observer 5 was updated: Ticket sold --
-
-+-- Observer 1 was updated: Ticket sold --
-
-+-- Observer 3 was updated: Ticket sold --
-2 tickets are currently sold!
-
-+-- Observer 4 was updated: Ticket sold --
-
-+-- Observer 6 was updated: Ticket sold --
-
-+-- Observer 5 was updated: Ticket sold --
-
-+-- Observer 1 was updated: Ticket sold --
-
-+-- Observer 3 was updated: Ticket sold --
-3 tickets are currently sold!
-
-+-- Observer 4 was updated: Ticket sold --
-
-+-- Observer 6 was updated: Ticket sold --
-
-+-- Observer 5 was updated: Ticket sold --
-
-+-- Observer 2 was updated: Ticket sold --
-
-+-- Observer 1 was updated: Ticket sold --
-
-+-- Observer 3 was updated: Ticket sold --
-1 ticket is currently sold!
++-- Observer 7 was updated: Seat filled --
+1 seat is currently filled!
+
++-- Observer 7 was updated: Seat filled --
+2 seats are currently filled!
+
++-- Observer 7 was updated: Seat filled --
+3 seats are currently filled!
+
++-- Observer 7 was updated: Seat filled --
+4 seats are currently filled!
+
++-- Observer 7 was updated: Seat filled --
+5 seats are currently filled!
+
+0-- Observer 7 was updated: All seats filled --
+** All seats are filled!
+5 seats are currently filled!

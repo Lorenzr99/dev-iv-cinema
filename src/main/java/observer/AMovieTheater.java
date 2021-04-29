@@ -3,12 +3,17 @@ package observer;
 import decorator.Marathon;
 import decorator.StandardTicket;
 import decorator.Ticket;
+import state.SeatsAvailable;
+import state.SoldOut;
+import state.State;
+import state.TicketsAvailable;
 
 public class AMovieTheater implements MovieTheater {
     private String updateString;
     private int ticketsSold;
     private int seatsFilled;
     private int maxSeats;
+    private State state;
 
     public AMovieTheater() {
         ticketsSold = 0;
@@ -16,13 +21,19 @@ public class AMovieTheater implements MovieTheater {
         maxSeats = 5;
     }
 
-    public int getTicketsSold() {
-        return ticketsSold;
+    public void setState(State state) {
+        this.state = state;
     }
+    public String getState() { return state.toString(); }
+
+    public int getTicketsSold() { return ticketsSold; }
+    public void increaseTicketCount() { ticketsSold++; }
 
     public int getSeatsFilled() {
         return seatsFilled;
     }
+    public int getMaxSeats() { return maxSeats; }
+    public void increaseSeatCount() { seatsFilled++; }
 
     @Override
     public void addObserver(Observer observer) {
@@ -37,26 +48,13 @@ public class AMovieTheater implements MovieTheater {
         return updateString;
     }
 
-    //methods will call observers
     @Override
     public void ticketSold() {
-        if(ticketsSold < maxSeats) {
-            ticketsSold++;
-            warnObservers("Ticket sold");
-        } else {
-            warnObservers("Sold out");
-            System.out.println("** Movie theater is SOLD OUT!");
-        }
+        state.ticketSold();
     }
 
     @Override
     public void seatFilled() {
-            if (seatsFilled <= ticketsSold && ticketsSold != 0) {
-                seatsFilled++;
-                warnObservers("Seat filled");
-            } else {
-                warnObservers("No ticket");
-                System.out.println("** A ticket must be bought first!");
-            }
+        state.seatFilled();
     }
 }
