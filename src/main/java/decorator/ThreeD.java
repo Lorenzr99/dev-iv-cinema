@@ -3,7 +3,7 @@ package decorator;
 public class ThreeD extends ExtraCost {
     public ThreeD(Ticket ticket) {
         super(ticket);
-        super.setDescription("+ 3D movie");
+        super.setDescription(" + 3D movie");
     }
     @Override
     protected double cost() {

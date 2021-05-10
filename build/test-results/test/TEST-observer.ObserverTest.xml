@@ -1,39 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="observer.ObserverTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-04-15T12:29:49" hostname="LAPTOP-4MR3KE2N" time="0.028">
+<testsuite name="observer.ObserverTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-29T12:53:44" hostname="LAPTOP-4MR3KE2N" time="0.045">
   <properties/>
-  <testcase name="warnObservers()" classname="observer.ObserverTest" time="0.019"/>
-  <testcase name="seatFilled()" classname="observer.ObserverTest" time="0.002"/>
-  <testcase name="seatFilledWithoutTicket()" classname="observer.ObserverTest" time="0.0"/>
-  <testcase name="multipleTicketsSold()" classname="observer.ObserverTest" time="0.004"/>
-  <testcase name="ticketSold()" classname="observer.ObserverTest" time="0.001"/>
-  <system-out><![CDATA[Observer 1 was updated!
+  <testcase name="allSeatsFilled()" classname="observer.ObserverTest" time="0.045"/>
+  <system-out><![CDATA[
+-- Observer 7 was updated: Ticket sold --
 1 ticket is currently sold!
-Observer 1 was updated!
-Observer 4 was updated!
-1 seat is currently filled!
-Observer 1 was updated!
-Observer 4 was updated!
-1 ticket is currently sold!
-Observer 1 was updated!
-Observer 5 was updated!
-Observer 3 was updated!
-Observer 4 was updated!
+
+-- Observer 7 was updated: Ticket sold --
 2 tickets are currently sold!
-Observer 1 was updated!
-Observer 5 was updated!
-Observer 3 was updated!
-Observer 4 was updated!
+
+-- Observer 7 was updated: Ticket sold --
 3 tickets are currently sold!
-Observer 1 was updated!
-Observer 5 was updated!
-Observer 3 was updated!
-Observer 4 was updated!
-1 ticket is currently sold!
-Observer 1 was updated!
-Observer 5 was updated!
-Observer 2 was updated!
-Observer 3 was updated!
-Observer 4 was updated!
+
+-- Observer 7 was updated: Ticket sold --
+4 tickets are currently sold!
+
+-- Observer 7 was updated: Ticket sold --
+5 tickets are currently sold!
+
+-- Observer 7 was updated: Seat filled --
+1 seat is currently filled!
+
+-- Observer 7 was updated: Seat filled --
+2 seats are currently filled!
+
+-- Observer 7 was updated: Seat filled --
+3 seats are currently filled!
+
+-- Observer 7 was updated: Seat filled --
+4 seats are currently filled!
+
+-- Observer 7 was updated: Seat filled --
+5 seats are currently filled!
+
+-- Observer 7 was updated: All seats filled --
+** All seats are filled!
+5 seats are currently filled!
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

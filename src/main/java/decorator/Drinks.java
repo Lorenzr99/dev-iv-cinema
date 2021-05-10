@@ -3,7 +3,7 @@ package decorator;
 public class Drinks extends ExtraCost {
     public Drinks(Ticket ticket) {
         super(ticket);
-        super.setDescription("+ drinks");
+        super.setDescription(" + drinks");
     }
     @Override
     protected double cost() {

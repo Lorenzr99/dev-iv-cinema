@@ -3,7 +3,7 @@ package decorator;
 public class VIPseats extends ExtraCost {
     public VIPseats(Ticket ticket) {
         super(ticket);
-        super.setDescription("+ VIP seats");
+        super.setDescription(" + VIP seats");
     }
     @Override
     protected double cost() {

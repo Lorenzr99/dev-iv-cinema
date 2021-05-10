@@ -1,10 +1,19 @@
 package observer;
 
+import decorator.Marathon;
+import decorator.StandardTicket;
+import decorator.Ticket;
+import state.SeatsAvailable;
+import state.SoldOut;
+import state.State;
+import state.TicketsAvailable;
+
 public class AMovieTheater implements MovieTheater {
     private String updateString;
     private int ticketsSold;
     private int seatsFilled;
     private int maxSeats;
+    private State state;
 
     public AMovieTheater() {
         ticketsSold = 0;
@@ -12,9 +21,19 @@ public class AMovieTheater implements MovieTheater {
         maxSeats = 5;
     }
 
-    public int getTicketCount() {
-        return ticketsSold;
+    public void setState(State state) {
+        this.state = state;
     }
+    public String getState() { return state.toString(); }
+
+    public int getTicketsSold() { return ticketsSold; }
+    public void increaseTicketCount() { ticketsSold++; }
+
+    public int getSeatsFilled() {
+        return seatsFilled;
+    }
+    public int getMaxSeats() { return maxSeats; }
+    public void increaseSeatCount() { seatsFilled++; }
 
     @Override
     public void addObserver(Observer observer) {
@@ -22,36 +41,20 @@ public class AMovieTheater implements MovieTheater {
     }
 
     @Override
-    public String warnObservers() {
+    public String warnObservers(String message) {
         for (Observer observer: observers) {
-            updateString = observer.update();
+            updateString = observer.update(message);
         }
         return updateString;
     }
 
-    //methods will call observers
     @Override
-    public String ticketSold() {
-        if(ticketsSold < maxSeats) {
-            ticketsSold++;
-            if(ticketsSold == 1) System.out.println("1 ticket is currently sold!");
-            else System.out.println(ticketsSold + " tickets are currently sold!");
-            return warnObservers();
-        } else {
-            System.out.println("Movie theater is SOLD OUT!");
-            return warnObservers();
-        }
+    public void ticketSold() {
+        state.ticketSold();
     }
 
     @Override
-    public String seatFilled() {
-        if(seatsFilled <= ticketsSold && ticketsSold != 0) {
-            seatsFilled++;
-            if(seatsFilled == 1) System.out.println("1 seat is currently filled!");
-            else System.out.println(seatsFilled + " seats are currently filled!");
-            return warnObservers();
-        } else {
-            return "A ticket must be bought first!";
-        }
+    public void seatFilled() {
+        state.seatFilled();
     }
 }

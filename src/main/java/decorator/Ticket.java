@@ -7,10 +7,12 @@ public abstract class Ticket {
             this.description = description;
         }
 
-        protected String getDescription() {
+        public String getDescription() {
             return description;
         }
 
         protected abstract double cost();
+
+        public double getCost() { return cost(); };
 
 }
